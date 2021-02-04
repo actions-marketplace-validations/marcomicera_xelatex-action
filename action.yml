@@ -1,0 +1,14 @@
+# Action metadata file:
+# https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action#creating-an-action-metadata-file
+
+name: 'xelatex GitHub Action'
+description: 'Runs xelatex on a .tex file'
+inputs:
+  input-file:
+    description: 'Input file to be compiled'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.input-file }}
