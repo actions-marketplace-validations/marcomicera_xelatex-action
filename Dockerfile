@@ -25,4 +25,5 @@ RUN apk update && \
 # Entrypoint script
 #
 # https://docs.github.com/en/actions/creating-actions/dockerfile-support-for-github-actions#entrypoint
-ENTRYPOINT [ "entrypoint.sh" ]
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT [ "/entrypoint.sh" ]
