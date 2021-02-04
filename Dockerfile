@@ -6,7 +6,7 @@ FROM alpine:${ALPINE_VERSION}
 # Installing packages
 RUN apk update && \
     apk add --no-cache \
-        texlive-full=20200406-r6 && \
+        texlive-full=20200406-r8 && \
     rm -rf /var/cache/apk/
 
 # No 'xelatex' user
